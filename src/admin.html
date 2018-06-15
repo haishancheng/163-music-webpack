@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <title>管理页面</title>
+</head>
+
+<body>
+  <div class="neteaseMusic">
+    <header>
+      <div class="circle"></div>
+      <div class="logo"></div>
+    </header>
+    <main>
+      <aside>
+        <div id="songList-container">
+          <ul class="songList">
+          </ul>
+        </div>
+        <div class="newSong"></div>
+      </aside>
+      <div class="uploadPage active">
+          <div id="uploadContainer" class="draggable">
+            <span >选择文件或拖曳文件</span>
+            <p>文件大小不能超过40MB</p>
+            <div class="loading"></div>
+          </div>
+          <div id="uploadButton" class="clickable">选择文件</div>
+      </div>
+      <div class="infoPage">
+      </div>
+    </main> 
+    <div id="siteLoading" class="site-loading">
+    </div>
+  </div>
+
+  <script src="//at.alicdn.com/t/font_697646_lne8z2yjhc.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <!-- moxie要在plupload之前引用 -->
+  <script src="../vendors/moxie.js"></script>
+  <script src="../node_modules/plupload/js/plupload.min.js"></script>
+  <script src="../node_modules/qiniu-js/dist/qiniu.min.js"></script>
+  <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+
+</body>
+
+</html>

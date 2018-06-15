@@ -1,0 +1,390 @@
+@charset "UTF-8";
+/* css reset */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul, ol {
+  list-style: none; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal; }
+
+body {
+  font: 14px/1.5 Helvetica,sans-serif; }
+
+body {
+  font-size: 15px;
+  background: white; }
+
+/* iconfont */
+.icon {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden; }
+
+/* ----------header区域---------- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  z-index: 10; }
+
+/* topBar */
+section.topBar {
+  background: #D43C33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 17px 10px; }
+
+section.topBar .logo > svg {
+  width: 142px;
+  height: 25px;
+  vertical-align: top; }
+
+section.topBar a {
+  color: white;
+  line-height: 20px;
+  display: inline-block;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 11px; }
+
+/* topTabs */
+section.topTabs .topTabsNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid #CCCCCC; }
+
+section.topTabs .topTabsNav > li {
+  width: 33.333333%;
+  text-align: center;
+  line-height: 20px;
+  position: relative; }
+
+section.topTabs .topTabsNav > li > .text {
+  padding: 10px 5px;
+  display: inline-block;
+  position: relative;
+  top: 0;
+  border-bottom: 2px solid transparent; }
+
+section.topTabs .topTabsNav > li > .text {
+  padding: 10px 5px;
+  padding-bottom: 8px;
+  display: inline-block;
+  position: relative;
+  top: 0; }
+
+section.topTabs .topTabsNav > li.active > .text {
+  color: #D43C33;
+  border-bottom-color: #D43C33; }
+
+/* ----------main区域---------- */
+main {
+  margin-top: 107px; }
+
+#page1, #page2, #page3 {
+  display: none; }
+
+#page1.active, #page2.active, #page3.active {
+  display: block; }
+
+/* page1 */
+#page1 {
+  overflow: hidden; }
+
+.sectionTitle {
+  border-left: 2px solid #D43C33;
+  font-size: 17px;
+  line-height: 1;
+  padding-left: 8px;
+  margin: 20px 0 8px; }
+
+/* page1 > songSheet */
+section.songSheet .songSheetList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 13px;
+  /* 用这个加上宽度设置小于33.33来拉出中间的空隙 */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+section.songSheet .songSheetList > li {
+  width: 32.8%;
+  margin: 8px 0; }
+
+section.songSheet .songSheetList > li > img {
+  width: 100%; }
+
+section.songSheet .songSheetList > li > p {
+  line-height: 18px;
+  height: 36px;
+  padding: 0 6px;
+  /* 多行文字溢出加上省略号 */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden; }
+
+/* page1 > newestMusic & page2 > hotList*/
+section.newestMusic .songList > li,
+section.hotList .songList > li,
+section.best-match .matchList > li {
+  position: relative;
+  padding: 5px 35px 6px 10px;
+  border-bottom: 1px solid #E2E2E3; }
+
+section.newestMusic .songList > li > h3,
+section.hotList .songList > li > h3,
+section.best-match .matchList > li > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 17px; }
+
+section.newestMusic .songList > li > p,
+section.hotList .songList > li > p,
+section.best-match .matchList > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #888; }
+
+section.newestMusic .songList > li > p > .SQsvg,
+section.hotList .songList > li > p > .SQsvg,
+section.best-match .matchList > li > p > .SQsvg {
+  padding-right: 5px;
+  width: 18px;
+  vertical-align: middle; }
+
+section.newestMusic .songList .playButton,
+section.hotList .songList .playButton,
+section.best-match .matchList .playButton {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%); }
+
+section.newestMusic .songList .icon-play,
+section.hotList .songList .icon-play,
+section.best-match .matchList .icon-play {
+  width: 23px;
+  height: 23px;
+  vertical-align: middle;
+  color: #AAA; }
+
+/* page1 > art */
+section.art {
+  padding-top: 38px;
+  padding-bottom: 18px;
+  background: transparent url(//i.loli.net/2017/08/25/599f862b9c98d.png) no-repeat center;
+  background-size: cover;
+  text-align: center; }
+
+section.art svg {
+  width: 230px;
+  height: 44px; }
+
+section.art .link-wrapper > a {
+  display: inline-block;
+  border: 1px solid;
+  line-height: 40px;
+  font-size: 16px;
+  padding: 0 19px;
+  border-radius: 20px;
+  color: #D43C33;
+  margin-top: 10px;
+  margin-bottom: 5px; }
+
+section.art .copyright {
+  font-size: 12px;
+  color: #888;
+  -webkit-transform: scale(0.75);
+          transform: scale(0.75); }
+
+/* page2 */
+/* page2 > hotTop */
+section.hotTop {
+  width: 100%;
+  height: 124.468px;
+  height: 7.77928rem;
+  padding-left: 20px;
+  background: url(../img/bg-hotSong-f01a2.jpg) no-repeat center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative; }
+
+section.hotTop::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .2); }
+
+section.hotTop .hotIcon {
+  background: url(../img/sprite-5207a.png) no-repeat;
+  width: 142px;
+  height: 67px;
+  z-index: 1;
+  background-position: -24px -30px;
+  background-size: 166px 97px; }
+
+section.hotTop .hotTime {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fff;
+  z-index: 1; }
+
+/* page2 > hotList */
+/* section.hotList{
+
+} */
+section.hotList .songList > li {
+  margin-left: 40px;
+  padding-left: 0;
+  position: relative; }
+
+section.hotList .songList > li > .order {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #999999;
+  font-size: 17px;
+  font-family: Helvetica, sans-serif; }
+
+section.hotList .songList > li:nth-child(1) > .order,
+section.hotList .songList > li:nth-child(2) > .order,
+section.hotList .songList > li:nth-child(3) > .order {
+  color: #d43c33; }
+
+section.hotList .songList > .tip {
+  padding: 20px 0;
+  color: #999999;
+  text-align: center;
+  font-size: 14px; }
+
+/* page3 */
+/* page3 > search-area */
+section.search-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 10px 5px;
+  position: relative; }
+
+section.search-area > input {
+  width: 100%;
+  height: 30px;
+  padding: 0 30px;
+  line-height: 18px;
+  background: #ebecec;
+  font-size: 14px;
+  color: #333;
+  border-radius: 30px;
+  outline: none;
+  border-style: none; }
+
+section.search-area > .icon-search {
+  font-size: 18px;
+  position: absolute;
+  left: 18px; }
+
+section.search-area > .icon-delete {
+  font-size: 16px;
+  position: absolute;
+  right: 18px;
+  color: #bbb;
+  display: none; }
+
+section.search-area > .icon-delete.show {
+  display: block; }
+
+/* page3 > hot-search */
+section.hot-search {
+  display: none; }
+
+section.hot-search.show {
+  display: block; }
+
+section.hot-search > .hot-search-simple {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 5px; }
+
+section.hot-search > .hot-search-simple > li {
+  border: 1px solid rgba(0, 0, 0, .1);
+  border-radius: 32px;
+  padding: 8px 12px;
+  margin: 5px;
+  line-height: 14px;
+  font-size: 14px;
+  color: #333; }
+
+/* page3 > best-match */
+section.best-match {
+  display: none; }
+
+section.best-match.show {
+  display: block; }
+
+section.best-match .notFind {
+  text-align: center;
+  margin-top: 20px; }

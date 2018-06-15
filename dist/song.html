@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <title>歌曲播放</title>
+  <style>
+  </style>
+<link rel="shortcut icon" href="favicon.ico"><link href="css/song.css" rel="stylesheet"></head>
+<body>
+  <div id="app" class="page">
+    <audio src="#" autoplay></audio>
+    <div class="page-cover"></div>
+    <div class="disc-container playing">
+      <img class="pointer" src="img/pointer-be4eb.png" alt="">
+      <div class="disc">
+        <div class="icon-wrapper">
+          <svg class="icon icon-play">
+            <use xlink:href="#icon-play1"></use>
+          </svg>
+          <svg class="icon icon-pause">
+            <use xlink:href="#icon-pause"></use>
+          </svg>
+        </div>
+        <img class="ring" src="img/dist-69796.png" alt="">
+        <img class="light" src="img/dist-light-996fc.png" alt="">
+        <div class="cover"></div>
+      </div>
+    </div>
+    <div class="song-description">
+      <h1>
+        <span class="name">海山城</span>
+        <span class="singer">海山城</span>
+      </h1>
+      <div class="lyric">
+        <div class="lines">
+          <p>本歌曲暂无歌词</p>
+        </div>
+      </div>
+    </div>
+    <div class="links">
+      <a href="#">打开</a>
+      <a class="main" href="#">下载</a>
+    </div>
+  </div>
+  <script src="//at.alicdn.com/t/font_697646_lne8z2yjhc.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+<script type="text/javascript" src="js/song-bundle.js"></script></body>
+</html> 
