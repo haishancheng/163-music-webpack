@@ -36,6 +36,13 @@
   width: 24vw;
   position: absolute;
   left: 45vw;
+  pointer-events: none;
+  transform-origin:0 0;
+  transform:rotate(-20deg);
+  transition: all 1s;
+}
+.disc-container.playing .pointer{
+  transform:rotate(0deg)
 }
 .disc-container .disc{
   display: flex;
@@ -45,10 +52,12 @@
 }
 .disc-container .disc .ring{
   width: 72vw;
+  pointer-events: none;
 }
 .disc-container .disc .light{
   width: 72vw;
   position: absolute;
+  pointer-events: none;
 }
 .disc-container .disc .cover{
   width: 44.5vw;

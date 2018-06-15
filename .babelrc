@@ -1,0 +1,4 @@
+// 将es6Object.assign转成es5的语法
+{
+  "plugins": ["transform-object-assign"]
+}

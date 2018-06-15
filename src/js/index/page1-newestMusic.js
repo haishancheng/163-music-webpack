@@ -55,8 +55,6 @@ export default function(){
       this.view = view
       this.model = model
       this.view.init()
-      //将ol.songList先渲染进页面
-      this.view.render(this.model.data)
       this.model.fetch().then(() => {
         this.view.render(this.model.data)
       })

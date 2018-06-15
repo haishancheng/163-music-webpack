@@ -10,7 +10,7 @@ import uploadSong from './upload-song'
 av()
 eventHub()
 editSong()
-loading()
+// loading() 暂不开启此功能
 newSong()
 songList()
 uploadSong()

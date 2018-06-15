@@ -64,7 +64,18 @@
 .disc-container .pointer {
   width: 24vw;
   position: absolute;
-  left: 45vw; }
+  left: 45vw;
+  pointer-events: none;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transform: rotate(-20deg);
+          transform: rotate(-20deg);
+  -webkit-transition: all 1s;
+  transition: all 1s; }
+
+.disc-container.playing .pointer {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg); }
 
 .disc-container .disc {
   display: -webkit-box;
@@ -79,11 +90,13 @@
   margin-top: 18vw; }
 
 .disc-container .disc .ring {
-  width: 72vw; }
+  width: 72vw;
+  pointer-events: none; }
 
 .disc-container .disc .light {
   width: 72vw;
-  position: absolute; }
+  position: absolute;
+  pointer-events: none; }
 
 .disc-container .disc .cover {
   width: 44.5vw;

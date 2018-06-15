@@ -98,6 +98,12 @@ import eventHub from '../common/event-hub'
       let id = this.getSongId()
       this.model.get(id).then(() => {
         this.view.render(this.model.data)
+        //因为移动端流量珍贵，禁止自动播放，必须和手机交互后才能播放，下面设置播放，故在手机上有可能一开始播放不出来
+        this.view.play()
+        if($(this.view.el).find('audio')[0].paused){
+          //没自动播放的情况
+          $(this.view.el).find('.disc-container').removeClass('playing')
+        }
       })
       this.bindEvents()
     },

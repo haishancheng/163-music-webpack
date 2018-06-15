@@ -201,8 +201,8 @@ section.best-match .matchList .playButton {
 section.newestMusic .songList .icon-play,
 section.hotList .songList .icon-play,
 section.best-match .matchList .icon-play {
-  width: 23px;
-  height: 23px;
+  width: 25px;
+  height: 25px;
   vertical-align: middle;
   color: #AAA; }
 
