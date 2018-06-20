@@ -47,7 +47,6 @@ export default function(){
       </div>
     `,
     render(data = {}){//es6语法，如果没有传data或者data为undefined，那么data等于{}
-    // $(this.el).empty()
       let placeholders = ['name', 'singer', 'url', 'id', 'cover', 'lyrics']
       let html = this.template
       placeholders.map((placeholder) => {

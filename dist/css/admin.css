@@ -159,6 +159,19 @@ header .logo {
   background: url(../img/logo-3e164.png) no-repeat;
   background-size: contain; }
 
+header .songSheetAdmin {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: white;
+  font-size: 1.1em; }
+
+header .songSheetAdmin > svg {
+  font-size: 1.6em;
+  margin-left: 5px; }
+
 /* main */
 main {
   -webkit-box-flex: 1;
@@ -557,3 +570,5 @@ aside {
   100% {
     -webkit-transform: scale(0.1);
             transform: scale(0.1); } }
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJjc3MvYWRtaW4uY3NzIiwic291cmNlUm9vdCI6IiJ9*/

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+  <meta charset="UTF-8">
+  <title>歌单管理页面</title>
+</head>
+
+<body>
+  <div class="neteaseMusic">
+    <header>
+      <div class="circle"></div>
+      <div class="logo"></div>
+    </header>
+    <main>
+      <aside class="left">
+        <div class="songSheetList-wrapper">
+          <ul class="songSheetList"></ul>
+        </div>
+        <div class="newSongSheet active">新建歌单</div>
+      </aside>
+      <div class="editArea-wrapper"></div>
+      <aside class="right">
+        <p class='songListTitle'>所有歌曲</p>
+        <div class="songList-wrapper">
+          <ul class="songList"></ul>
+        </div>
+      </aside>
+    </main> 
+    <div id="siteLoading" class="site-loading">
+    </div>
+  </div>
+
+  <script src="//at.alicdn.com/t/font_697646_qqmglp1ga7g.js"></script>
+  <script src="../node_modules/leancloud-storage/dist/av-min.js"></script>
+  <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+
+</body>
+
+</html>

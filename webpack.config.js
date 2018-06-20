@@ -8,7 +8,9 @@ module.exports = {
     index: './src/js/index/indexEntry.js',
     song: './src/js/song/play-song.js',
     admin: './src/js/admin/adminEntry.js',
+    songSheetAdmin: './src/js/songSheetAdmin/songSheetAdminEntry.js',
   },
+  devtool: 'inline-source-map',//报错定位到src中的源文件，而不是打包后的文件
   output: {
     filename: 'js/[name]-bundle.js',
     path: path.resolve(__dirname, 'dist'),
@@ -38,6 +40,13 @@ module.exports = {
       chunks: ["admin"], //html对应的输出的js文件
       filename:'admin.html', //html输出到的目标路径
       template:'./src/admin.html',
+      inject: true,
+      favicon: "./favicon.ico"
+    }),
+    new HtmlWebpackPlugin({
+      chunks: ["songSheetAdmin"], //html对应的输出的js文件
+      filename:'songSheetAdmin.html', //html输出到的目标路径
+      template:'./src/songSheetAdmin.html',
       inject: true,
       favicon: "./favicon.ico"
     })
