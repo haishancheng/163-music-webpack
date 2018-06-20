@@ -95,7 +95,7 @@ export default function(){
             window.eventHub.emit('afterUpload', {url: sourceLink, name: response.key})
             // window.eventHub.emit('new', )
           },
-          'Error': function (up, err, errTip) {
+          'Error': (up, err, errTip) => {
             this.model.data.isloading = false
             console.log('上传失败，请打开本地服务器node server.js 8888')
             //上传出错时，处理相关的事情
