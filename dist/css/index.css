@@ -201,6 +201,37 @@ section.best-match .matchList .icon-play {
   vertical-align: middle;
   color: #AAA; }
 
+/* page1 > newestMusic */
+section.newestMusic .songList .loading {
+  display: none;
+  text-align: center; }
+
+section.newestMusic .songList .loading.active {
+  display: block; }
+
+section.newestMusic .songList .icon-loading {
+  font-size: 30px;
+  /* 一定要设置成块才能旋转 */
+  display: inline-block;
+  -webkit-animation: 1s rotate linear infinite;
+          animation: 1s rotate linear infinite; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
 /* page1 > art */
 section.art {
   padding-top: 38px;
@@ -243,6 +274,7 @@ section.hotTop {
   height: 7.77928rem;
   padding-left: 20px;
   background: url(../img/bg-hotSong-f01a2.jpg) no-repeat center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

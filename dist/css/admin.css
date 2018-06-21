@@ -203,6 +203,37 @@ aside {
 .songList {
   width: 100%; }
 
+/* page1 > newestMusic */
+.songList .loading {
+  display: none;
+  text-align: center; }
+
+.songList .loading.active {
+  display: block; }
+
+.songList .icon-loading {
+  font-size: 30px;
+  /* 一定要设置成块才能旋转 */
+  display: inline-block;
+  -webkit-animation: 1s rotate linear infinite;
+          animation: 1s rotate linear infinite; }
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
 .songList > li {
   padding: 5px;
   cursor: pointer;
