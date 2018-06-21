@@ -2,7 +2,7 @@ export default function(){
   let view = {
     el: 'section.brief',
     render(data){
-      $(this.el).text(data.brief)
+      $(this.el).html(data.brief.replace(/\r|\n/g,"<br>"))
     }
   }
 

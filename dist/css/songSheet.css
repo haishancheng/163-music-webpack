@@ -127,25 +127,25 @@ section.musicList .songList > li {
   border-bottom: 1px solid #E2E2E3;
   margin-left: 40px; }
 
-section.musicList .songList > li > h3 {
+section.musicList .songList > li h3 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 17px; }
 
-section.musicList .songList > li > p {
+section.musicList .songList > li p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   font-size: 12px;
   color: #888; }
 
-section.musicList .songList > li > p > .SQsvg {
+section.musicList .songList > li p > .SQsvg {
   padding-right: 5px;
   width: 18px;
   vertical-align: middle; }
 
-section.musicList .songList > li > .order {
+section.musicList .songList > li .order {
   position: absolute;
   top: 50%;
   left: -30px;
@@ -155,14 +155,12 @@ section.musicList .songList > li > .order {
   font-size: 17px;
   font-family: Helvetica, sans-serif; }
 
-section.musicList .songList .playButton {
+section.musicList .songList .icon-play {
   position: absolute;
   right: 8px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%); }
-
-section.musicList .songList .icon-play {
+          transform: translateY(-50%);
   width: 25px;
   height: 25px;
   vertical-align: middle;
