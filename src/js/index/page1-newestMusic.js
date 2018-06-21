@@ -59,7 +59,6 @@ export default function(){
       this.model = model
       this.view.init()
       this.model.fetch().then(() => {
-        console.log(1)
         this.view.hideLoading()
         this.view.render(this.model.data)
       })

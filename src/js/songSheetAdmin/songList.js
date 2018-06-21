@@ -75,7 +75,6 @@ export default function(){
           this.model.data.songSheetSongs.push({id: songId, name: songName})
         }else{
           this.model.data.songSheetSongs = this.model.data.songSheetSongs.filter((songSheetSong)=>{
-            // console.log(songSheetSong)
             return songSheetSong.id !== songId
           })
         }
