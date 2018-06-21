@@ -11,3 +11,5 @@
 [手机端](https://haishancheng.github.io/163-music-webpack/dist)
 
 [PC端](https://haishancheng.github.io/163-music-webpack/dist/admin.html)
+
+__注：__管理端上传文件需要服务器返回一个uptoken，想要上传，可将本项目clone下来，本地运行node server.js 8888开启服务器端

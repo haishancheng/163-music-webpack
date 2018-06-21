@@ -1,0 +1,144 @@
+@import url('./cssReset.css');
+
+/* section.cover */
+header{
+  position: relative;
+  padding: 30px 15px 30px 15px;
+  background: #666 no-repeat center;
+  background-size: cover;
+  z-index: -2;
+  height: 178px;
+}
+header::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(68,68,68,.8);
+  z-index: -1;
+}
+header .cover{
+  position: relative;
+  float: left;
+}
+header .cover img{
+  width: 114px;
+  height: 114px;
+  background-color: #e2e2e3;
+}
+header .cover::before{
+  position: absolute;
+  top: 10px;
+  content: '歌单';
+  color: white;
+  font-size: 12px;
+  background-color: rgba(217,48,48,.8);
+  padding: 0 10px;
+  border-radius: 0 10px 10px 0;
+}
+/* bfc解决文字环绕 */
+header .songSheetName{
+  color: white;
+  padding-left: 20px;
+  overflow: hidden;
+}
+
+/* section.brief */
+section.brief{
+  padding: 15px 40px 0 20px;
+  line-height: 16px;
+  color: #666;
+  font-size: 13px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 18px;
+}
+section.brief.show{
+  display: block;
+  overflow: visible;
+}
+section.brief::before{
+  content: '﹀';
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.1em;
+  top: 50px;
+  right:10px;
+}
+section.brief.show::before{
+  display: none;
+}
+section.brief::after{
+  content: '︿';
+  position: absolute;
+  font-weight: 600;
+  font-size: 1.1em;
+  bottom: 0;
+  right:10px;
+  display: none;
+}
+section.brief.show::after{
+  display: block;
+}
+
+/* section.musicList */
+section.musicList .sectionTitle{
+  border-left: 2px solid #D43C33;
+  font-size: 17px;
+  line-height: 1;
+  padding: 8px;
+  /* padding: 20px 0 8px 8px; */
+  margin: 20px 0 8px;
+  background-color: #eeeff0;
+}
+section.musicList .songList > li,{
+  position: relative;
+  padding: 5px 35px 6px 0px;
+  border-bottom: 1px solid #E2E2E3;
+  margin-left: 40px;
+}
+section.musicList .songList > li > h3{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 17px;
+}
+section.musicList .songList > li > p{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #888;
+}
+section.musicList .songList > li > p > .SQsvg{
+  padding-right: 5px;
+  width: 18px;
+  vertical-align: middle;
+}
+section.musicList .songList > li > .order{
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  transform: translateY(-50%);
+  color: #999999;
+  font-size: 17px;
+  font-family: Helvetica, sans-serif;
+}
+section.musicList .songList .playButton{
+  position: absolute;
+  right:8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+section.musicList .songList .icon-play
+{
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+  color: #AAA;
+}

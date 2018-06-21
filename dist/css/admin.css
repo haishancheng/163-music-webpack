@@ -1,4 +1,32 @@
-input[type=checkbox]{
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box;box-sizing: border-box;}
+*::after{-webkit-box-sizing: border-box;box-sizing: border-box;}
+*::before{-webkit-box-sizing: border-box;box-sizing: border-box;}
+ul,ol{list-style: none;}
+a{color: inherit;text-decoration: none;}
+input{font: inherit;}
+h1,h2,h3,h4,h5,h6{ font-weight: normal; }
+
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+/* iconfont */
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .1);
+}input[type=checkbox]{
     /*同样，首先去除浏览器默认样式*/
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -43,32 +71,6 @@ input[type=checkbox]:checked:after{
     background: #fff;
     color: #ed6b60;
 }@charset "UTF-8";
-/* css reset */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-ul, ol {
-  list-style: none; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-input {
-  font: inherit; }
-
-/* common css */
 body {
   font-size: 12px;
   line-height: 1.5;
@@ -76,28 +78,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both; }
-
-/* iconfont */
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden; }
-
-/* 滚动条 */
-::-webkit-scrollbar {
-  width: 5px; }
-
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(0, 0, 0, .1); }
 
 /* neteaseMusic */
 .neteaseMusic {
@@ -367,6 +347,18 @@ aside {
 .uploadPage .clickable:hover {
   background: #ba2502;
   color: #eeeeee; }
+
+.uploadPage .errorPrompt {
+  position: absolute;
+  right: 100px;
+  bottom: 85px;
+  color: #ba2502;
+  opacity: 0;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+
+.uploadPage .errorPrompt.active {
+  opacity: 1; }
 
 /* main > infoPage */
 .infoPage.active {

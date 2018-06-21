@@ -1,38 +1,9 @@
-/* css reset */
-*{margin: 0;padding: 0;box-sizing: border-box;}
-*::after{box-sizing: border-box;}
-*::before{box-sizing: border-box;}
-ul,ol{list-style: none;}
-a{color: inherit;text-decoration: none;}
-input{font: inherit;}
-
-/* common css */
+@import url('./cssReset.css');
 body{
   font-size: 12px;
   line-height: 1.5;
   height: 100vh;
   display: flex;
-}
-.clearfix::after{
-  content: '';
-  display: block;
-  clear: both;
-}
-/* iconfont */
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
-}
-/* 滚动条 */
-::-webkit-scrollbar {
-  width: 5px;
-}
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(0, 0, 0, .1);
 }
 
 /* neteaseMusic */

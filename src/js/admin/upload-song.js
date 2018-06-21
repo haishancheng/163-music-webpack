@@ -14,6 +14,9 @@ export default function(){
     },
     hide(){
       $(this.el).removeClass('active')
+    },
+    showError(){
+      $(this.el).find('.errorPrompt').addClass('active')
     }
   }
   let model = {
@@ -96,7 +99,9 @@ export default function(){
             // window.eventHub.emit('new', )
           },
           'Error': (up, err, errTip) => {
+            this.view.resetLoadProgressBar()
             this.model.data.isloading = false
+            this.view.showError()
             console.log('上传失败，请打开本地服务器node server.js 8888')
             //上传出错时，处理相关的事情
           },

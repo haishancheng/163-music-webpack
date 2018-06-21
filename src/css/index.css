@@ -1,21 +1,8 @@
-/* css reset */
-*{margin: 0; padding: 0; box-sizing: border-box;}
-*::before{box-sizing: border-box}
-*::after{box-sizing: border-box}
-a{text-decoration: none; color: inherit;}
-ul,ol{list-style: none;}
-h1,h2,h3,h4,h5,h6{ font-weight: normal; }
+@import url('./cssReset.css');
 body{font: 14px/1.5 Helvetica,sans-serif}
 body{
   font-size: 15px;
   background: white;
-}
-/* iconfont */
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden;
 }
 /* ----------header区域---------- */
 header{
@@ -111,10 +98,10 @@ section.songSheet .songSheetList > li{
   width: 32.8%;
   margin: 8px 0;
 }
-section.songSheet .songSheetList > li > img{
+section.songSheet .songSheetList > li img{
   width: 100%;
 }
-section.songSheet .songSheetList > li > p{
+section.songSheet .songSheetList > li p{
   line-height: 18px;
   height: 36px;
   padding: 0 6px;
@@ -202,6 +189,11 @@ section.art .copyright{
   font-size: 12px;
   color: #888;
   transform: scale(.75);
+}
+section.art .copyright a{
+  color: #d43c33;
+  text-decoration: underline;
+  font-size: 14px;
 }
 
 /* page2 */

@@ -1,30 +1,32 @@
-@charset "UTF-8";
-/* css reset */
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+*{margin: 0;padding: 0;-webkit-box-sizing: border-box;box-sizing: border-box;}
+*::after{-webkit-box-sizing: border-box;box-sizing: border-box;}
+*::before{-webkit-box-sizing: border-box;box-sizing: border-box;}
+ul,ol{list-style: none;}
+a{color: inherit;text-decoration: none;}
+input{font: inherit;}
+h1,h2,h3,h4,h5,h6{ font-weight: normal; }
 
-*::after {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-*::before {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-ul, ol {
-  list-style: none; }
-
-a {
-  color: inherit;
-  text-decoration: none; }
-
-input {
-  font: inherit; }
-
-/* common css */
+.clearfix::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+/* iconfont */
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 5px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, .1);
+}@charset "UTF-8";
 body {
   font-size: 12px;
   line-height: 1.5;
@@ -32,28 +34,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
-
-.clearfix::after {
-  content: '';
-  display: block;
-  clear: both; }
-
-/* iconfont */
-.icon {
-  width: 1em;
-  height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-  overflow: hidden; }
-
-/* 滚动条 */
-::-webkit-scrollbar {
-  width: 5px; }
-
-/* 滚动条滑块 */
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background: rgba(0, 0, 0, .1); }
 
 /* neteaseMusic */
 .neteaseMusic {

@@ -1,12 +1,4 @@
-/* css reset */
-*{margin:0; padding: 0; box-sizing: border-box;}
-*::before, *::after{box-sizing: border-box; }
-/* iconfont */
-.icon {
-  width: 1em; height: 1em;
-  vertical-align: -0.15em;
-  fill: currentColor;
-}
+@import url('./cssReset.css');
 /* animation */
 @keyframes circle{0% {transform: rotate(0deg); } 100% {transform: rotate(360deg); } }
 
@@ -15,6 +7,17 @@
   display: flex;
   flex-direction: column;
 }
+.page::before{
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.4);
+  z-index: -1;
+}
+
 /* page-cover */
 .page-cover{
   position: fixed;
@@ -25,7 +28,7 @@
   background: #666 no-repeat center;
   background-size: cover;
   filter: blur(10px);
-  z-index: -1;
+  z-index: -2;
 }
 /* disc-container */
 .disc-container{
